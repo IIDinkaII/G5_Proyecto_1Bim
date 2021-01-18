@@ -38,11 +38,17 @@ public class Elector {
             for (Dignidad dignidad : categoria.getListaDignidades()) {
                 if (candidato.getDignidad().equals(dignidad)) {
                     this.voto.agregarCandidato(candidato);
+                    candidato.aumentarVoto();
                     candidatosSeleccionados.add(candidato);
                 }
             }
         }
         return candidatosSeleccionados;
+    }
+
+    @Override
+    public String toString() {
+        return "\n" + this.cedula + "\t" + this.nombres + " " + this.apellidos;
     }
 
     @Override

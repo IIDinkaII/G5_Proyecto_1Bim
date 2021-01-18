@@ -44,4 +44,7 @@ public class ElectorDAOImpl implements IElectorDAO {
         }
     }
 
+    public List<Elector> getElectores() {
+        return electores;
+    }
 }

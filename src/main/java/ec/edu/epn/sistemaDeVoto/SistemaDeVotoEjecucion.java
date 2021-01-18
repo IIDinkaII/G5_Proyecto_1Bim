@@ -3,6 +3,8 @@ package ec.edu.epn.sistemaDeVoto;
 import ec.edu.epn.sistemaDeVoto.dao.*;
 import ec.edu.epn.sistemaDeVoto.model.Categoria;
 import ec.edu.epn.sistemaDeVoto.model.Dignidad;
+import ec.edu.epn.sistemaDeVoto.model.Elector;
+import ec.edu.epn.sistemaDeVoto.model.PartidoPolitico;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,8 +28,22 @@ public class SistemaDeVotoEjecucion {
 
         Controlador c = new Controlador(resultados, form, elecDAO, candDAO, partDAO);
 
+        System.out.println("\n --------------------Resultados antes de votar:-------------------- \n");
         resultados.mostrarOpciones();
+        resultados.mostrarResultados(1);
 
+        // Se crea el Elector que va a sufragar
+        Elector elector = elecDAO.getElectores().get(1);
+        System.out.println("\nElector: " + elector.toString());
+        // Se selecciona por quienes va a votar (partido, categoria)
+        PartidoPolitico partidoSeleccionado = partDAO.getPartidos().get(0);
+        Categoria categoriaSeleccionada = listaCat.get(0);
+
+        // Vota
+        elector.votar(partidoSeleccionado, categoriaSeleccionada);
+
+        // Resultados despues del voto
+        System.out.println("\n --------------------Resultados despues de votar:-------------------- \n");
         resultados.mostrarResultados(1);
 
     }
