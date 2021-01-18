@@ -1,0 +1,10 @@
+ec\edu\epn\sistemaDeVoto\dao\ICandidatoDAOTest.class
+ec\edu\epn\sistemaDeVoto\model\ValidacionCedulaParametersTest.class
+ec\edu\epn\sistemaDeVoto\model\ValidacionCedulaTest.class
+ec\edu\epn\sistemaDeVoto\dao\ElectorDAOImplParametersTest.class
+ec\edu\epn\sistemaDeVoto\FormularioVotoTest.class
+ec\edu\epn\sistemaDeVoto\model\ElectorTest.class
+ec\edu\epn\sistemaDeVoto\model\LoginTest.class
+ec\edu\epn\sistemaDeVoto\dao\ElectorDAOImplTest.class
+ec\edu\epn\sistemaDeVoto\dao\IElectorDAOTest.class
+ec\edu\epn\sistemaDeVoto\dao\CandidatoDAOImplTest.class
